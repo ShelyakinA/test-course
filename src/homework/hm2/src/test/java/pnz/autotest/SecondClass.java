@@ -38,17 +38,12 @@ public class SecondClass {
             searchAndClick.click();
             searchAndClick = driver.findElement(By.xpath("//a[@aria-label=\"Настройки портала\"]"));
             searchAndClick.click();
-            searchAndClick= driver.findElement(By.xpath("//a[@aria-label=\"Язык\"]"));
+            searchAndClick = driver.findElement(By.xpath("//a[@aria-label=\"Язык\"]"));
             searchAndClick.click();
-
-            WebElement findButton = driver.findElement(By.xpath("//*[@type=\"button\"]"));
-            findButton.click();
-            findButton.sendKeys(Keys.ARROW_DOWN);
-            findButton.sendKeys(Keys.ARROW_DOWN);
-            findButton.sendKeys(Keys.ARROW_DOWN);
-            findButton.sendKeys(Keys.ARROW_DOWN);
-            findButton.sendKeys(Keys.ARROW_DOWN);
-            findButton.sendKeys(Keys.ENTER);
+            searchAndClick = driver.findElement(By.cssSelector(".button_arrow_down"));
+            searchAndClick.click();
+            searchAndClick = driver.findElement(By.xpath("(//*[text()=\"English\"])[2]"));
+            searchAndClick.click();
 
             WebElement saveButton = driver.findElement(By.xpath("//*[@type=\"submit\"]"));
             saveButton.click();
